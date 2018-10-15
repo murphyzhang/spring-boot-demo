@@ -1,0 +1,7 @@
+server:
+  port: 5060
+  servlet:
+    context-path: /demo
+
+resources:
+  env: sit

@@ -1,0 +1,27 @@
+#默认加载application.yml配置
+server:
+  port: 5060  #端口号
+  servlet:
+    context-path: /demo #spring上下文
+
+spring:
+  profiles:
+    active: @env@ #必填, env为pom.xml文件中<properties>下的<env>值
+  freemarker:
+    template-loader-path: classpath:/templates/
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl
+  datasource:
+    url: jdbc:mysql://120.55.19.29:33005/blog?&useUnicode=true&characterEncoding=utf8&useServerPrepStmts=true&autoReconnect=true
+    username: root
+    password: Kos@123$
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
